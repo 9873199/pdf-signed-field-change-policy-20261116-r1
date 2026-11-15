@@ -1,0 +1,188 @@
+{
+  "created": "2026-11-16T06:57:04+08:00",
+  "reviewed": true,
+  "reviewer": "Codex primary agent, AI-assisted",
+  "uid": 11582,
+  "frozen_commit": "dc451008cac340cc977d130d3c7975b7158053d0",
+  "native_trajectory_sha256": "b7dc58660ee1970eec1c3ea72df13f5f8ccac1ac8d8e37a5a0154d66b2fcc2ea",
+  "files": [
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\freeze.json",
+      "path": "freeze.json",
+      "sha256": "b6a4982666f5fe573ac9b2b82aacffce44475a07fbffbd561c635c794db70a00"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\freeze-audit.json",
+      "path": "freeze-audit.json",
+      "sha256": "d90cc2efef48c185773901d98bd4156664e17c8d4d6f2e2f7187fbc22f77d51e"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\environment-reviewed.json",
+      "path": "environment-reviewed.json",
+      "sha256": "1e6f6a4d30a6c69f53baccd653ba78e0da27ae5a23ee252564186bf26bae600e"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\evidence-map.json",
+      "path": "evidence-map.json",
+      "sha256": "5e57ca9899a4f16e36f2d190063d162adcc7906e97f21839aa754958cc129419"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\model-final-answer.txt",
+      "path": "model-final-answer.txt",
+      "sha256": "cb312400eec10cea669fd3975992bda6efb3dca6d0cb6e6096cd2468a1ed5bc9"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\test-results.json",
+      "path": "test-results.json",
+      "sha256": "3633b686fc5b7ef03925cafb7909c2784f2a18a7bf97a9df0a5739ecc26a0263"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\evaluation-qc.json",
+      "path": "evaluation-qc.json",
+      "sha256": "5515059f9b263fcc37543b80e2732870afd733b54d14ed7b20e423162b3b5d89"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\actual-import.json",
+      "path": "verification/acceptance-r1/actual-import.json",
+      "sha256": "eeae1296251854d7861e7e73abd346bc55efc5912797e54818b6b726965a9f0c"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\actual-import.stderr.log",
+      "path": "verification/acceptance-r1/actual-import.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\actual-import.stdout.log",
+      "path": "verification/acceptance-r1/actual-import.stdout.log",
+      "sha256": "ac621a454b5f9f1936dc30c6a84db29468aaad8479d360efcf68b98a16f3abe2"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\demo-preflight.json",
+      "path": "verification/acceptance-r1/demo-preflight.json",
+      "sha256": "1836732a60e898aced690c42bb242948ef16c38d7733c39c89d20f9db5cf7a70"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\demo-preflight.stderr.log",
+      "path": "verification/acceptance-r1/demo-preflight.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\demo-preflight.stdout.log",
+      "path": "verification/acceptance-r1/demo-preflight.stdout.log",
+      "sha256": "ac504964cb2ca85648e5382c168e12fe9f689c6393b64a9708e7740ac1437aa4"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\demo.py",
+      "path": "verification/acceptance-r1/demo.py",
+      "sha256": "8ad3d41ec4258d6fce60486ccd3f0ec3fad50c61516c8a9cba6f02589c5cbdf9"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\dependency-lock.json",
+      "path": "verification/acceptance-r1/dependency-lock.json",
+      "sha256": "ab0756db0969072b74be1b38e4c2dcac5a7213c173c08baf55b4f1d2bf765668"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\dependency-lock.stderr.log",
+      "path": "verification/acceptance-r1/dependency-lock.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\dependency-lock.stdout.log",
+      "path": "verification/acceptance-r1/dependency-lock.stdout.log",
+      "sha256": "239a9515cefd26de369f7aa014a39ee580c3844a8dc055765d1ae1d0346c5cd4"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\focused-regression.json",
+      "path": "verification/acceptance-r1/focused-regression.json",
+      "sha256": "6657d1545a91a8674cad46acc554db96e1614700fecba09f008ff8f73ae08524"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\focused-regression.stderr.log",
+      "path": "verification/acceptance-r1/focused-regression.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\focused-regression.stdout.log",
+      "path": "verification/acceptance-r1/focused-regression.stdout.log",
+      "sha256": "b84e287e3b9b2d38e4efaae156c186008f8605795ade1481ad7f25e4f60b1d5b"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\independent-contract.json",
+      "path": "verification/acceptance-r1/independent-contract.json",
+      "sha256": "9e249b7d1ecd78919663c7c16b7e667e1fbc396c409896950f68a069b8dffcdc"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\independent-contract.stderr.log",
+      "path": "verification/acceptance-r1/independent-contract.stderr.log",
+      "sha256": "4156a1d72c2ddb51b57e15d00f60cd933b52d94a17dbad269bb61ca37eb08059"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\independent-contract.stdout.log",
+      "path": "verification/acceptance-r1/independent-contract.stdout.log",
+      "sha256": "87d28d9d074a3650d7ed6a4551537eed3ea2207e3801f5edbc6abb467dab579b"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\pdf_fixtures.py",
+      "path": "verification/acceptance-r1/pdf_fixtures.py",
+      "sha256": "009f65c3ff97a7d31df5490a577701dc3bc0f8321032901ee3523b64e3081b67"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\replay-proof.json",
+      "path": "verification/acceptance-r1/replay-proof.json",
+      "sha256": "5d04d376ff19c0512cf55026932cbf612acbb54bfb53a7c3a3fce605886df6e0"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\reproduction-notes.md",
+      "path": "verification/acceptance-r1/reproduction-notes.md",
+      "sha256": "8b2aae1c0c2c137b332aa63eedc7fef234538738657a3d5645985990603901ca"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\reviewed-spec.json",
+      "path": "verification/acceptance-r1/reviewed-spec.json",
+      "sha256": "94510511f70af6746a69e3a0133b681fed0e391af19dfa18fa58d908405d0084"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\reviewer_adapter.py",
+      "path": "verification/acceptance-r1/reviewer_adapter.py",
+      "sha256": "4229d4398ef17507af06df720cb6d6f85241fbb7dcd5809937b4a6eec35a67bf"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\test_contract.py",
+      "path": "verification/acceptance-r1/test_contract.py",
+      "sha256": "0d23bf2e04ed9d2499fad24d84079a4237a891e0a1434060723bf132182e31bb"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\recorded-runtime-r1\\actual-commands.json",
+      "path": "verification/recorded-runtime-r1/actual-commands.json",
+      "sha256": "555c3ccdda46fe21beadbf5e63787fc6e6abfb315770174e1c00552ff3d40ff3"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\recorded-runtime-r1\\actual-keystrokes.json",
+      "path": "verification/recorded-runtime-r1/actual-keystrokes.json",
+      "sha256": "f7da9aa5d56d9709d5a886642a6749ce652ebf3e190a8e66c4f4773f9ac207e6"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\recorded-runtime-r1\\live-pdf-output.log",
+      "path": "verification/recorded-runtime-r1/live-pdf-output.log",
+      "sha256": "ac504964cb2ca85648e5382c168e12fe9f689c6393b64a9708e7740ac1437aa4"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\recorded-runtime-r1\\recording-status.json",
+      "path": "verification/recorded-runtime-r1/recording-status.json",
+      "sha256": "0deef1d9b5eb5d7b1c61278d9d236bc43d05a321454f85c544be7f94096b2321"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\recorded-runtime-r1\\spec.json",
+      "path": "verification/recorded-runtime-r1/spec.json",
+      "sha256": "f4fb645928fa84ffac242ea363138eb8b6dfa79fe3c1f8ed72643258c1b54012"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\recorded-runtime-r1\\typing-check.json",
+      "path": "verification/recorded-runtime-r1/typing-check.json",
+      "sha256": "84f46a06079232720f4a1f7b25f5c871651f3c14e501a46c2aae11e890e971fd"
+    }
+  ],
+  "reproduction_readme": "冻结源码独立回放341项相关回归通过，1项可选qrcode测试按缺失依赖排除；341包含模型新增16项，不能再次求和。额外13项独立真实签名PDF检查通过。现场临时EC CA和真实认证签名，离线信任根，不修改宿主信任库，不使用阅读器。每个反例分别核密码学intact/valid/trusted以及修改许可失败，不能把签名有效等同修改获准。验证既有指定文本字段值和appearance允许、未列字段拒绝；重命名/类型/动作/跨页引用/重复名/新增字段拒绝；违规中间修订恢复原名仍拒绝；NO_CHANGES不可放宽；共享appearance要求全部受影响字段获许可；默认验证仍允许旧填表。新增模型16项回归另含FieldMDP锁、策略回调签名和真实revision、字段换父、签名字段和widget变化。原collector在模型成功终态后复制深层文件遇MAX_PATH，保留原件，新恢复器只补缺失拷贝，核所有1444文件和既存原轨Hash；没有模型重试或产物修改。独立回放使用cache短目录，发布工具的长路径版本保留原扫描规则，完整Git blob与匿名Public快照核验通过。75秒连续自动逐键演示，计时/完整词修补/实际原始画面逐一核。",
+  "no_model_source_edits": true,
+  "native_trace_included": false
+}

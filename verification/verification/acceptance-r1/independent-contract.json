@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-16T06:51:40+08:00",
+  "argv": [
+    "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\runtime-tasks\\pyHanko\\env\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1/test_contract.py",
+    "-o",
+    "addopts=",
+    "--basetemp",
+    "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1/tmp-independent"
+  ],
+  "cwd": "D:\\hc\\userFeedback\\cache\\review-replays\\11582-r1",
+  "exit_code": 0,
+  "stdout_log": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\independent-contract.stdout.log",
+  "stderr_log": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\independent-contract.stderr.log"
+}

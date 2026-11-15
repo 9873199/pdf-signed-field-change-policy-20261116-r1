@@ -1,0 +1,28 @@
+Done. Here's a summary of the implementation:
+
+## 新模块：`pyhanko.sign.diff_analysis.field_change_policy`
+
+在现有增量修订分析之上加了一个可注入的字段变更许可层，全部导出到 `pyhanko.sign.diff_analysis` 包命名空间：
+
+- **`FieldChangePermissionPolicy`** — 回调接口。`check_field_change(request)` 收到 `FieldChangeRequest`（被验证签名 `signature`、`signed_revision`、当前 `revision`、完整字段名 `fq_field_name`），抛出即拒绝。
+- **`WhitelistFieldChangePolicy`** — 调用方给出完整允许字段名集合的常见实现。
+- **`FieldChangeRestrictedDiffPolicy`** — `DiffPolicy` 装饰器，包装 `DEFAULT_DIFF_POLICY`（可换），先跑结构化预检，再完整执行被包装策略（DocMDP/FieldMDP 限制原样生效，只收窄不放宽），最后做字段级核查。`review_file` 始终从**真实签名修订**逐一对比每个中间修订与最终修订，先允许后撤销、跨修订重定义的对象都会被按真实对象图分析。
+- **`FieldChangeNotPermitted`**（`SuspiciousModification` 子类）— 携带 `field_name` 与 `reference`，给出具体字段和对象原因。
+
+强制规则：仅签名时已存在的 `/Tx` 文本字段的 `/V`/正常 appearance 变化可被接受；字段树重命名、同名重复、换父/重排、新增/删除字段、字段对象替换、按钮/签名字段变更、`/AA`/`/A` 动作（AcroForm、字段、widget 三级）、widget 跨页移动、widget 字典任何改动、未授权字段变更均拒绝。共享 surface 分析对每个签名后变更的对象收集**所有**受影响字段逐一核权限，不从第一个引用反向归属；签名后无变化的重写（identical no-op）不误伤。无法解析的字段树/页面树一律抛错，绝不降级为无害。分析全程只读，不改 PDF。
+
+## 测试：`pkgs/pyhanko/tests/test_field_change_policy.py`（16 个用例，全部通过）
+
+- 测试时用 `cryptography` 现场生成临时 CA（根+签名者），用 `PdfFileWriter` 自建表单并签名，纯本地 `ValidationContext`（无 OCSP/CRL、不开阅读器、不执行脚本）。
+- 场景：合法指定字段填值、两个允许字段同时填、未授权字段填值、签名字段篡改、新增字段、字段重命名、字段重挂（换父节点）、`/AA` 动作追加、widget 跨页移动、共享 appearance 流（含"只归属第一个引用"的破损 base policy 单元级用例）、中间修订违规后撤销仍被拒、DocMDP `NO_CHANGES` 与 FieldMDP 锁不被放宽、策略回调收到签名与修订号、同名字段不可分析即拒绝。
+- 每个反向用例分开断言：密码学有效（`intact`/`valid`/`trusted`）与修改策略失败（`docmdp_ok=False`、`diff_result` 类型与字段名），并对同一文件用 `DEFAULT_DIFF_POLICY` 交叉验证默认行为不变。
+
+## 文档
+
+- `docs/api-docs/pyhanko.sign.diff_analysis.rst`：新增 `field_change_policy` 模块的 automodule 一节。
+- `docs/lib-guide/validation/diff-analysis.rst`：新增 "Restricting which fields may be filled in after signing" 一节，含语义说明与两个完整示例（白名单与自定义策略）。
+
+## 回归
+
+- 既有 `test_diff_analysis.py` 全部 **194 个用例通过**（不传策略时行为不变）；`test_fields.py` 37 个、`test_signing.py` 94 个通过（`test_simple_qr_sign` 失败是环境里缺可选依赖 `qrcode`，与本改动无关）。
+- 新代码通过 `ruff check` 与 `ruff format`（仓库既有配置）。

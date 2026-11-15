@@ -1,0 +1,30 @@
+{
+  "video": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\recording-word-timing-r1\\product-run-75s.mp4",
+  "sha256": "b75b93ac0de735a765b82e44145f6a2bbdff59f461708967d7a1a107b79f187d",
+  "capture_exit_code": 0,
+  "continuous": true,
+  "nominal_seconds": 75,
+  "source": "Fresh reviewer GUI command editor executing frozen-product subprocess commands",
+  "helper_is_separate_verification_tool": true,
+  "content_qa": "PENDING",
+  "input_automation": {
+    "mode": "automated GUI character editor",
+    "source_is_human": false,
+    "timing_policy": "word-special-v2",
+    "within_word_letter_delay_seconds": [
+      0.1,
+      0.5
+    ],
+    "before_special_and_between_words_delay_seconds": [
+      0.4,
+      0.8
+    ],
+    "whole_word_repairs_per_command": [
+      1,
+      3
+    ],
+    "planned_typing_seconds": 9.679158739317037,
+    "command_executes_only_after_exact_buffer_match": true
+  },
+  "keystroke_log": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\recording-word-timing-r1\\actual-keystrokes.jsonl"
+}

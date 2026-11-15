@@ -1,0 +1,7 @@
+Real certified PDF signed by a temporary local CA
+Cryptographic signature intact/valid/trusted: True True True
+Allowed text field accepted: True
+Unlisted text field rejected: True
+Forbidden intermediate rename, then revert: rejected = True
+Shared appearance, only first field allowed: rejected = True
+Default form-filling behavior unchanged: True

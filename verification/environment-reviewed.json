@@ -1,0 +1,47 @@
+{
+  "time": "2026-11-16T06:57:04+08:00",
+  "uid": 11582,
+  "container": false,
+  "actual": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\runtime-tasks\\pyHanko\\env\\Scripts\\python.exe",
+    "modules": {
+      "pyhanko.sign.diff_analysis.field_change_policy": "D:\\hc\\userFeedback\\cache\\review-replays\\11582-r1\\pkgs\\pyhanko\\src\\pyhanko\\sign\\diff_analysis\\field_change_policy.py"
+    }
+  },
+  "dependency_lock": "aiohappyeyeballs==2.7.1\naiohttp==3.14.5\naiosignal==1.4.0\nasn1crypto==1.5.1\nattrs==26.1.0\ncertifi==2026.10.23\ncertomancer==0.16.0\ncffi==2.1.1\ncharset-normalizer==3.5.2\nclick==8.5.1\ncolorama==0.4.6\ncoverage==7.17.3\ncryptography==50.0.2\nfreezegun==1.5.5\nfrozenlist==1.8.0\nhypothesis==6.170.15\nidna==3.20\niniconfig==2.3.1\nJinja2==3.1.6\nlxml==6.1.3\nMarkupSafe==3.0.4\nmultidict==7.2.1\noscrypto==1.3.0\npackaging==26.3\npluggy==1.7.0\npropcache==0.5.4\npycparser==3.12\nPygments==2.21.0\npyHanko==0.38.1\npyhanko-certvalidator==0.33.0\npytest==9.2.0\npytest-asyncio==1.5.0\npytest-cov==7.1.0\npytest-socket==0.8.1\npython-dateutil==4.0.0\npython-pkcs11==0.10.1\nPyYAML==6.0.3\nrequests==2.34.2\nrequests-mock==1.12.1\nruff==0.17.5\nsortedcontainers==2.4.0\ntzdata==2026.6\ntzlocal==5.4.5\nuritools==7.0.0\nurllib3==2.8.0\nyarl==1.25.1\n",
+  "dependency_environment": "Reused the task dependency environment; exact pip freeze retained",
+  "frozen_source_import_verified": true,
+  "external_runtime_services": [],
+  "environment_limits": [
+    "Windows Python3.14; cryptography and native crypto dependencies, no container.",
+    "Temporary local CA; no live endpoints, trust-store edits, PDF viewer or script execution in independent fixtures.",
+    "Optional qrcode test excluded because dependency absent; not a product deduction."
+  ],
+  "task_preparation": {
+    "time": "2026-11-16T01:29:01+08:00",
+    "status": "BASELINE_READY",
+    "uid": 11582,
+    "slug": "pyHanko",
+    "python": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\runtime-tasks\\pyHanko\\env\\Scripts\\python.exe",
+    "workspace": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\workspaces\\pyHanko",
+    "source_path": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\workspaces\\pyHanko\\pkgs\\pyhanko\\src;D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\workspaces\\pyHanko\\pkgs\\pyhanko-certvalidator\\src;D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\workspaces\\pyHanko\\internal\\common-test-utils\\src;D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\workspaces\\pyHanko\\src;D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\workspaces\\pyHanko",
+    "task_environment": {
+      "HYPOTHESIS_STORAGE_DIRECTORY": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\runtime-tasks\\pyHanko\\hypothesis"
+    },
+    "dependency_lock": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\runtime-tasks\\pyHanko\\requirements-lock-r2.txt",
+    "baseline_evidence": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\environments\\pyHanko\\revision-r2\\baseline.json",
+    "baseline_stdout": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\environments\\pyHanko\\revision-r2\\baseline.stdout.log",
+    "baseline_source": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\environments\\pyHanko\\baseline-source",
+    "source_proof": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\preparation\\pyHanko\\source-proof.json",
+    "environment_reproducibility": "有外部依赖，未容器化",
+    "source_import": {
+      "module": "pyhanko.sign.diff_analysis.policies",
+      "file": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\workspaces\\pyHanko\\pkgs\\pyhanko\\src\\pyhanko\\sign\\diff_analysis\\policies.py",
+      "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "clean": true,
+    "formal_calls": 0,
+    "scope_exclusions": []
+  }
+}

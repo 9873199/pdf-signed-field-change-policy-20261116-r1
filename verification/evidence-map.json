@@ -1,0 +1,46 @@
+{
+  "requirements": [
+    {
+      "requirement": "Opt-in caller-supplied field permissions with signature and real revision context",
+      "source": "FieldChangeRequest, FieldChangeRestrictedDiffPolicy._request/review_file and public exports",
+      "evidence": "native16 frozen regression plus independent allow/deny API adapter",
+      "result": "CONFIRMED"
+    },
+    {
+      "requirement": "Only existing text value/appearance; structure/actions/type/pages/duplicate and new fields denied",
+      "source": "_list_field_tree/_check_tree_structure/_check_actions_and_widgets/_check_widget_ownership/_check_field_content",
+      "evidence": "independent13 plus model16 frozen tests with real signed PDF",
+      "result": "CONFIRMED"
+    },
+    {
+      "requirement": "All affected shared objects and every intermediate revision vetted",
+      "source": "_surface_refs/_check_shared_surfaces/review_file",
+      "evidence": "independent shared AP update and forbidden rename then revert; native shared first-reference regression",
+      "result": "CONFIRMED"
+    },
+    {
+      "requirement": "DocMDP/FieldMDP intersection; cryptographic validity separate and default unchanged",
+      "source": "base_policy.apply with original mdp args; validation status",
+      "evidence": "independent NO_CHANGES/default and native FieldMDP/crypto separation tests; total341 regression",
+      "result": "CONFIRMED"
+    }
+  ],
+  "process_evidence": {
+    "native_final_test_action": 501,
+    "native_final_public_export_action": 507,
+    "native_final_answer": 511,
+    "native_new_tests": 16,
+    "observed_behavior": "Implemented and revised shared-object checks, added real signed tests and documentation; final actual regression and public export commands retained"
+  },
+  "not_deducted": [
+    "Post-terminal collector MAX_PATH failure; recovered without changing existing bytes",
+    "Optional qrcode dependency absence",
+    "Shorter reviewer replay and extended publication paths"
+  ],
+  "independent_checks_are_not_native_model_tests": true,
+  "time": "2026-11-16T06:57:04+08:00",
+  "uid": 11582,
+  "frozen_commit": "dc451008cac340cc977d130d3c7975b7158053d0",
+  "native_trace_sha256": "b7dc58660ee1970eec1c3ea72df13f5f8ccac1ac8d8e37a5a0154d66b2fcc2ea",
+  "no_model_source_changes_after_freeze": true
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "live-pdf",
+    "argv": [
+      "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\runtime-tasks\\pyHanko\\env\\Scripts\\python.exe",
+      "-B",
+      "demo.py"
+    ],
+    "exit_code": 0,
+    "finished_at_seconds": 20.93,
+    "typed_command": "python -B demo.py",
+    "input_mode": "automated GUI command editor, not manual typing"
+  }
+]

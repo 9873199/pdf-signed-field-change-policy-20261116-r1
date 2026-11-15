@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-16T06:41:33+08:00",
+  "argv": [
+    "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\runtime-tasks\\pyHanko\\env\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "import importlib,json,sys;names=json.loads(sys.argv[1]);print(json.dumps({\"python\":sys.version,\"executable\":sys.executable,\"modules\":{n:importlib.import_module(n).__file__ for n in names}}))",
+    "[\"pyhanko.sign.diff_analysis.field_change_policy\"]"
+  ],
+  "cwd": "D:\\hc\\userFeedback\\cache\\review-replays\\11582-r1",
+  "exit_code": 0,
+  "stdout_log": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\actual-import.stdout.log",
+  "stderr_log": "D:\\hc\\userFeedback\\cache\\security-new20-20261116-r1\\evaluation\\uf-20261116-new20-pdf-signed-field-change-policy\\verification\\acceptance-r1\\actual-import.stderr.log"
+}
