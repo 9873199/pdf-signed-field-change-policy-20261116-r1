@@ -1,4 +1,11 @@
 from .commons import qualify
+from .field_change_policy import (
+    FieldChangeNotPermitted,
+    FieldChangePermissionPolicy,
+    FieldChangeRequest,
+    FieldChangeRestrictedDiffPolicy,
+    WhitelistFieldChangePolicy,
+)
 from .form_rules_api import (
     FieldComparisonContext,
     FieldComparisonSpec,
@@ -43,6 +50,10 @@ __all__ = [
     'DiffPolicy',
     'DiffResult',
     'DocInfoRule',
+    'FieldChangeNotPermitted',
+    'FieldChangePermissionPolicy',
+    'FieldChangeRequest',
+    'FieldChangeRestrictedDiffPolicy',
     'FieldComparisonContext',
     'FieldComparisonSpec',
     'FieldMDPRule',
@@ -58,6 +69,7 @@ __all__ = [
     'SigFieldModificationRule',
     'StandardDiffPolicy',
     'SuspiciousModification',
+    'WhitelistFieldChangePolicy',
     'WhitelistRule',
     'XrefStreamRule',
     'qualify',

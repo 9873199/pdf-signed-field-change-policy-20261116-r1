@@ -123,6 +123,105 @@ modified after signing (according to the diff policy used).
     `start a discussion <https://github.com/MatthiasValvekens/pyHanko/discussions>`_.
     All information helps!
 
+
+.. _diff-analysis-field-change-policy:
+
+Restricting which fields may be filled in after signing
+-------------------------------------------------------
+
+The default diff policy intentionally interprets DocMDP's "form fill"
+permission rather liberally: any form field may be filled in, and new
+signature fields may appear. If your application needs to be stricter ---
+for example, because a signed form may only be countersigned by filling in
+a few explicitly enumerated text fields --- you can inject a
+:class:`~pyhanko.sign.diff_analysis.field_change_policy.FieldChangePermissionPolicy`
+into the validation process by wrapping the regular diff policy in a
+:class:`~pyhanko.sign.diff_analysis.field_change_policy.FieldChangeRestrictedDiffPolicy`.
+
+This wrapper *intersects* the wrapped policy's verdict with yours: it can
+only ever reject changes that the wrapped policy would have accepted, never
+the other way around. In particular, DocMDP and FieldMDP restrictions
+imposed by the document's signatures remain fully in force.
+On top of that, it enforces the following rules:
+
+* only changes to the value (``/V``) and normal appearance data of
+  **text fields that already existed at signing time** can be permitted;
+* any structural change to the field tree is rejected (renames, duplicate
+  names, reparenting, new or deleted fields, replacement of field objects);
+* changes to button or signature fields are rejected;
+* adding or modifying actions (``/AA``, ``/A``) is rejected;
+* widget annotations must remain on their original page;
+* permission is adjudicated per affected field, not per object: if an
+  object that changed after signing (e.g. a shared appearance stream or
+  a shared font) is used by several fields, *all* of them must be
+  permitted --- permissions are never inferred from the first reference
+  encountered.
+
+Revisions are vetted one at a time against the actual signed revision, so
+changes that were later undone (or objects that were redefined across
+revisions) are still analysed. Changes that cannot be accounted for
+precisely are rejected with a
+:class:`~pyhanko.sign.diff_analysis.field_change_policy.FieldChangeNotPermitted`
+error naming the field and object involved; they are never silently
+treated as harmless.
+
+The most common case --- "only these fully qualified field names may
+change" --- is covered by
+:class:`~pyhanko.sign.diff_analysis.field_change_policy.WhitelistFieldChangePolicy`:
+
+.. code-block:: python
+
+    from pyhanko.pdf_utils.reader import PdfFileReader
+    from pyhanko.sign.diff_analysis import (
+        FieldChangeRestrictedDiffPolicy,
+        WhitelistFieldChangePolicy,
+    )
+    from pyhanko.sign.validation import validate_pdf_signature
+    from pyhanko_certvalidator import ValidationContext
+
+    vc = ValidationContext(trust_roots=[...])
+
+    with open('signed-form.pdf', 'rb') as doc:
+        r = PdfFileReader(doc)
+        sig = r.embedded_signatures[0]
+        diff_policy = FieldChangeRestrictedDiffPolicy(
+            WhitelistFieldChangePolicy({'Text1', 'Text2'}),
+            # optional: forwarded to the permission policy in every
+            # FieldChangeRequest, together with the revision numbers
+            signature=sig,
+        )
+        status = validate_pdf_signature(sig, vc, diff_policy=diff_policy)
+        print(status.pretty_print_details())
+
+If you need more context to make the decision, implement
+:meth:`~pyhanko.sign.diff_analysis.field_change_policy.FieldChangePermissionPolicy.check_field_change`
+yourself. It is called once for every field that was changed in a revision,
+with a
+:class:`~pyhanko.sign.diff_analysis.field_change_policy.FieldChangeRequest`
+that carries the signature being validated, the signed revision, the
+revision being vetted and the fully qualified field name. Raise
+:class:`~pyhanko.sign.diff_analysis.field_change_policy.FieldChangeNotPermitted`
+to reject the change.
+
+.. code-block:: python
+
+    from pyhanko.sign.diff_analysis import (
+        FieldChangeNotPermitted,
+        FieldChangePermissionPolicy,
+    )
+
+
+    class MyPolicy(FieldChangePermissionPolicy):
+        def check_field_change(self, request):
+            # request.signature, request.signed_revision,
+            # request.revision, request.fq_field_name
+            if not self.is_allowed(request):
+                raise FieldChangeNotPermitted(
+                    f"Change to {request.fq_field_name!r} denied",
+                    field_name=request.fq_field_name,
+                )
+
+
 If necessary, you can opt to turn off difference analysis altogether.
 This is sometimes a very reasonable thing to do, e.g. in the following cases:
 

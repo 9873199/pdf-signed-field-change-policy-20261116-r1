@@ -93,6 +93,14 @@ pyhanko.sign.diff\_analysis.form\_rules\_api module
    :undoc-members:
    :show-inheritance:
 
+pyhanko.sign.diff\_analysis.field\_change\_policy module
+--------------------------------------------------------
+
+.. automodule:: pyhanko.sign.diff_analysis.field_change_policy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyhanko.sign.diff\_analysis.policies module
 -------------------------------------------
 
